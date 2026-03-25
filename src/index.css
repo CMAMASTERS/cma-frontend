@@ -1,0 +1,80 @@
+/* index.css — Global Styles — Professional Blue & White Theme */
+
+:root {
+  --blue-900: #0a1628;
+  --blue-800: #0f2040;
+  --blue-700: #1a3a6b;
+  --blue-600: #1e4d8c;
+  --blue-500: #2563eb;
+  --blue-400: #3b82f6;
+  --blue-100: #dbeafe;
+  --blue-50:  #eff6ff;
+  --gold:     #d4a843;
+  --gold-light: #f0c96a;
+  --white:    #ffffff;
+  --gray-50:  #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
+  --green-50: #f0fdf4;
+  --green-600: #16a34a;
+  --green-border: #86efac;
+  --red-50:   #fef2f2;
+  --red-600:  #dc2626;
+  --red-border: #fca5a5;
+  --amber-50: #fffbeb;
+  --amber-600: #d97706;
+  --amber-border: #fcd34d;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--gray-50);
+  color: var(--gray-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+button { font-family: "Inter", sans-serif; cursor: pointer; border: none; outline: none; }
+input, textarea, select { font-family: "Inter", sans-serif; outline: none; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--blue-500); outline-offset: 2px; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(16px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%,100% { opacity:1; }
+  50%      { opacity:0.5; }
+}
+@keyframes shake {
+  0%,100% { transform:translateX(0); }
+  20%     { transform:translateX(-6px); }
+  40%     { transform:translateX(6px); }
+  60%     { transform:translateX(-4px); }
+  80%     { transform:translateX(4px); }
+}
+.fade-up { animation: fadeUp 0.4s ease forwards; }
+.fade-in { animation: fadeIn 0.3s ease forwards; }
+.shake   { animation: shake 0.4s ease; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gray-100); }
+::-webkit-scrollbar-thumb { background: var(--blue-400); border-radius: 3px; }
